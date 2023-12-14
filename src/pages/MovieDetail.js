@@ -10,12 +10,11 @@ export default function MovieDetais() {
   const params = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [movie, setMovie] = useState({});
-  const location = useLocation ()
+  const location = useLocation();
 
   const backLinkRef = useRef(location);
- 
 
-   useEffect(() => {
+  useEffect(() => {
     if (!params) return;
 
     setIsLoading(true);
@@ -50,9 +49,9 @@ export default function MovieDetais() {
         />
       )}
 
-<GoBackWrapper>
-      <GoBack to={backLinkRef.current.state?.from??"/" } >Go Back</GoBack>
-    </GoBackWrapper>
+      <GoBackWrapper>
+        <GoBack to={backLinkRef.current.state?.from ?? '/'}>Go Back</GoBack>
+      </GoBackWrapper>
 
       {movie && <MovieInfo movie={movie} />}
       {movie !== false && (
@@ -62,7 +61,7 @@ export default function MovieDetais() {
               <NavBtn to="cast">Cast</NavBtn>
             </li>
             <li>
-              <NavBtn  to="reviews">Rewievs</NavBtn>
+              <NavBtn to="reviews">Rewievs</NavBtn>
             </li>
           </AddInfoNav>
         </div>

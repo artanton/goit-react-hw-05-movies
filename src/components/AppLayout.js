@@ -1,9 +1,8 @@
 import { Suspense } from 'react';
 import { GlobalStyle } from './GlobalStyle';
-import {  Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { ProgressBar } from 'react-loader-spinner';
 import { Container, Header, Menu, MenuLink } from './AppLayoutStyled';
-
 
 export const AppLayout = () => {
   return (

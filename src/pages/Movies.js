@@ -11,7 +11,7 @@ export default function Movies() {
   const [foundedItems, setFoundedItems] = useState({});
   const [params, setParams] = useSearchParams();
   const query = params.get('query') ?? '';
-  const location = useLocation ()
+  const location = useLocation();
 
   const handleSubmit = newQuery => {
     if (newQuery === '') {
@@ -64,7 +64,7 @@ export default function Movies() {
       )}
 
       {foundedItems.results && foundedItems.results.length > 0 && (
-        <MoviesList FoundedMovies={foundedItems} location ={location} />
+        <MoviesList FoundedMovies={foundedItems} location={location} />
       )}
     </div>
   );

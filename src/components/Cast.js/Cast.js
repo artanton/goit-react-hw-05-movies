@@ -60,11 +60,9 @@ export const Cast = () => {
               />
 
               <div>
-
-              <p>{item.name}</p>
-              <p>Character: {item.character}</p> 
+                <p>{item.name}</p>
+                <p>Character: {item.character}</p>
               </div>
-              
             </Actor>
           ))}
       </ul>

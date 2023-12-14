@@ -33,7 +33,6 @@ export const fetchMovieById = async movieId => {
   return response.data;
 };
 
-
 export const fetchCast = async movieId => {
   const params = new URLSearchParams({
     api_key: KEY,

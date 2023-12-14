@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 export const MenuLink = styled(NavLink)`
   padding: 8px 16px;
@@ -10,7 +10,7 @@ export const MenuLink = styled(NavLink)`
 
   &.active {
     color: white;
-    background-color: #F4442E;
+    background-color: #f4442e;
   }
 `;
 
@@ -21,19 +21,14 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  
   align-items: center;
-  
+
   padding: 8px 0;
   margin-bottom: 46px;
   border-bottom: 1px solid black;
-
-  
-  
 `;
 
 export const Menu = styled.ul`
- display: flex;
-    gap: 12px;
-  
+  display: flex;
+  gap: 12px;
 `;

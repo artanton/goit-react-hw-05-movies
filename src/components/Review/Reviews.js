@@ -5,9 +5,6 @@ import { ProgressBar } from 'react-loader-spinner';
 import { fetchReviews } from 'api';
 import { Author, Post } from './ReviewStyled';
 
-
-
- 
 export const Reviews = () => {
   const params = useParams();
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +12,7 @@ export const Reviews = () => {
 
   useEffect(() => {
     if (!params) return;
-    
+
     setIsLoading(true);
     async function getReviews() {
       try {
@@ -50,20 +47,15 @@ export const Reviews = () => {
       <ul>
         {results &&
           results.length > 0 &&
-          
-          (
-            
-            results.map(item => (
+          results.map(item => (
             <Post key={item.id}>
-              
-              <Author><b>{item.author}</b></Author>
+              <Author>
+                <b>{item.author}</b>
+              </Author>
               <p>{item.content}</p>
             </Post>
-          )
-          ))
-          }
+          ))}
       </ul>
     </div>
   );
-
-}
+};
