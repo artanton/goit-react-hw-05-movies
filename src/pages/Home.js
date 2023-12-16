@@ -2,7 +2,7 @@ import { fetchTrends } from 'api';
 import { useEffect, useState } from 'react';
 import Notiflix from 'notiflix';
 import { ProgressBar } from 'react-loader-spinner';
-import { Tranding } from 'components/trending/Trending';
+import { MoviesList } from 'components/MoviesList/MoviesList';
 
 export default function HomePage() {
   const [trendItems, setTrendItems] = useState({});
@@ -44,7 +44,7 @@ export default function HomePage() {
       )}
 
       {trendItems.results && trendItems.results.length > 0 && (
-        <Tranding TrendFilms={trendItems} />
+        <MoviesList FoundedMovies={trendItems} />
       )}
     </div>
   );

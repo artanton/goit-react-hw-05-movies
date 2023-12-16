@@ -5,13 +5,14 @@ import { ProgressBar } from 'react-loader-spinner';
 import { fetchReviews } from 'api';
 import { Author, Post } from './ReviewStyled';
 
-export const Reviews = () => {
+export default function Reviews (){
   const params = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState({});
 
   useEffect(() => {
     if (!params) return;
+   
 
     setIsLoading(true);
     async function getReviews() {

@@ -5,7 +5,7 @@ import { ProgressBar } from 'react-loader-spinner';
 import { fetchCast } from 'api';
 import { Actor } from './CactStyled';
 
-export const Cast = () => {
+export default function Cast () {
   const params = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [actors, setActors] = useState({});
@@ -55,7 +55,7 @@ export const Cast = () => {
                     ? `https://image.tmdb.org/t/p/w200/${item.profile_path}`
                     : `https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700`
                 }
-                width="200"
+                width="150"
                 alt={item.name}
               />
 
